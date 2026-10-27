@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nour Bridal | Luxury Bridal Boutique Doha, Qatar</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FDFBF7',
+              sand: '#F7F2EB',
+              gold: '#BD9A5F',
+              goldHover: '#A1814B',
+              goldLight: '#EFE3D3',
+              dark: '#22201D',
+              muted: '#68635C',
+              border: '#E8E2D9'
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+            amiri: ['Amiri', 'serif'],
+            cairo: ['Cairo', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --font-title: 'Cinzel', serif;
+      --font-body: 'Montserrat', sans-serif;
+    }
+
+    html[dir="rtl"] {
+      --font-title: 'Amiri', serif;
+      --font-body: 'Cairo', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: #FDFBF7;
+      color: #22201D;
+      overflow-x: hidden;
+    }
+
+    .font-title {
+      font-family: var(--font-title);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(232, 226, 217, 0.7);
+    }
+
+    .gold-gradient-btn {
+      background: linear-gradient(135deg, #C5A059 0%, #B28B46 100%);
+      color: #ffffff;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gold-gradient-btn:hover {
+      background: linear-gradient(135deg, #B28B46 0%, #9B7533 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(189, 154, 95, 0.35);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="bg-brand-cream/90 backdrop-blur-md sticky top-0 z-40 border-b border-brand-border/60 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <!-- Logo & Brand Name -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-brand-goldLight/50 flex items-center justify-center border border-brand-gold/30 group-hover:scale-105 transition">
+          <svg viewBox="0 0 100 100" class="w-7 h-7 text-brand-gold fill-current">
+            <path d="M50 10 L58 25 L75 25 L61 35 L66 50 L50 40 L34 50 L39 35 L25 25 L42 25 Z" fill="none" stroke="currentColor" stroke-width="2"></path>
+            <text x="50" y="72" font-family="'Cinzel', serif" font-size="28" font-weight="bold" text-anchor="middle" fill="currentColor">N</text>
+            <path d="M25 82 Q 50 92 75 82" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="font-title text-xl sm:text-2xl font-bold tracking-widest text-brand-dark block leading-none">NOUR BRIDAL</span>
+          <span class="text-[9px] tracking-[0.25em] text-brand-gold uppercase block mt-1 font-medium">DOHA • QATAR</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-brand-dark">
+        <a href="#home" class="hover:text-brand-gold transition py-1 border-b-2 border-brand-gold" id="nav-home">Home</a>
+        <a href="#mission" class="hover:text-brand-gold transition py-1 border-b-2 border-transparent" id="nav-mission">Mission</a>
+        <a href="#collections" class="hover:text-brand-gold transition py-1 border-b-2 border-transparent" id="nav-collections">Collections</a>
+        <a href="#contact" class="hover:text-brand-gold transition py-1 border-b-2 border-transparent" id="nav-contact">Contact</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center space-x-3 sm:space-x-4 rtl:space-x-reverse">
+        <!-- Language Switcher Button -->
+        <button onclick="switchLanguage()" class="text-xs sm:text-sm font-semibold px-2.5 py-1.5 rounded border border-brand-gold/40 text-brand-dark hover:bg-brand-goldLight/40 transition flex items-center gap-1">
+          <i class="fa-solid fa-globe text-brand-gold"></i>
+          <span id="langLabel">English / العربية</span>
+        </button>
+
+        <!-- Social Icons -->
+        <a href="https://wa.me/97466053712" target="_blank" class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition text-sm">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center hover:bg-pink-600 hover:text-white transition text-sm hidden sm:flex">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <!-- Main Consultation CTA -->
+        <a href="https://wa.me/97466053712?text=Hello%20Nour%20Bridal,%20I%20would%20like%20to%20request%20a%20consultation" target="_blank" class="gold-gradient-btn px-4 py-2 rounded text-xs sm:text-sm font-medium shadow-sm hidden sm:inline-block" id="headerCtaBtn">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN BODY CONTENT -->
+  <main class="flex-grow">
+
+    <!-- HERO BANNER SECTION -->
+    <section id="home" class="relative bg-brand-sand min-h-[520px] md:min-h-[580px] flex items-center overflow-hidden">
+      <!-- Background Luxury Photography -->
+      <div class="absolute inset-0 z-0 opacity-80">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=80" alt="Nour Bridal Veil & Dress" class="w-full h-full object-cover object-center filter brightness-95">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-cream/80 via-brand-cream/50 to-transparent"></div>
+      </div>
+
+      <!-- Hero Content Container -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full flex justify-center md:justify-end">
+
+        <!-- Hero Mission Overlay Card -->
+        <div class="glass-card max-w-xl w-full p-8 sm:p-10 rounded-2xl shadow-xl text-center border border-white/60 my-auto">
+          <span class="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold block mb-2" id="heroTagline">
+            Your Dress, Designed to Impress
+          </span>
+          <h1 class="font-title text-3xl sm:text-4xl text-brand-dark mb-4 font-bold" id="heroMissionTitle">
+            Our Mission
+          </h1>
+          <p class="text-brand-muted text-sm sm:text-base leading-relaxed mb-8" id="heroMissionText">
+            Our mission is to make every bride's dream a reality by curating exquisite, unforgettable moments for your special day.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-3">
+            <a href="https://wa.me/97466053712?text=Hello%20Nour%20Bridal,%20I%20would%20like%20to%20chat" target="_blank" class="w-full sm:w-auto px-6 py-2.5 rounded-lg border-2 border-brand-gold text-brand-dark font-medium text-sm hover:bg-brand-gold hover:text-white transition flex items-center justify-center gap-2" id="heroBtnWhatsapp">
+              <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+              <span>WhatsApp Chat</span>
+            </a>
+            <a href="https://wa.me/97466053712?text=Hello%20Nour%20Bridal,%20I%20would%20like%20to%20request%20a%20consultation" target="_blank" class="w-full sm:w-auto gold-gradient-btn px-6 py-2.5 rounded-lg text-sm font-medium shadow flex items-center justify-center gap-2" id="heroBtnConsult">
+              <span>Send Consultation Request</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECONDARY DUAL-LANGUAGE MISSION SHOWCASE SECTION -->
+    <section id="mission" class="py-16 sm:py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="bg-brand-sand/60 rounded-3xl p-6 sm:p-10 border border-brand-border/80 shadow-sm">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+            <!-- Left Embroidered Dress Photo Card -->
+            <div class="lg:col-span-5">
+              <div class="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white aspect-[4/5] group">
+                <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&w=800&q=80" alt="Nour Bridal Lace Detailing" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-white text-xs font-light tracking-wider text-center">
+                  NOUR BRIDAL • HAUTE COUTURE DOHA
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Dual Language Column -->
+            <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left rtl:text-right">
+
+                <!-- English Mission Column -->
+                <div class="border-b md:border-b-0 md:border-r rtl:md:border-r-0 rtl:md:border-l border-brand-border/80 pb-6 md:pb-0 md:pr-6 rtl:md:pr-0 rtl:md:pl-6">
+                  <h2 class="font-title text-2xl sm:text-3xl text-brand-gold mb-3 font-semibold">
+                    Our Mission
+                  </h2>
+                  <p class="text-brand-muted text-sm leading-relaxed">
+                    Our mission is to make every bride's dream a reality by curating exquisite collections and providing personalized, intimate consultations. We believe in celebrating individual style and crafting unforgettable moments for your special day.
+                  </p>
+                </div>
+
+                <!-- Arabic Mission Column -->
+                <div dir="rtl" class="font-cairo">
+                  <h2 class="font-amiri text-2xl sm:text-3xl text-brand-gold mb-3 font-bold">
+                    رسالتنا
+                  </h2>
+                  <p class="text-brand-muted text-sm leading-relaxed">
+                    رسالتنا هي تحقيق حلم كل عروس من خلال تقديم مجموعات رائعة وتوفير استشارات شخصية وحميمة. نحن نؤمن بالاحتفال بالأسلوب الفردي وصياغة لحظات لا تُنسى ليومك الخاص.
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Button CTA -->
+              <div class="pt-4 flex justify-start rtl:justify-end">
+                <a href="#collections" class="gold-gradient-btn px-8 py-3 rounded-lg text-sm font-semibold shadow-md inline-flex items-center gap-2" id="exploreCollBtn">
+                  <span>Explore Collections</span>
+                  <i class="fa-solid fa-arrow-right text-xs ltr:inline hidden"></i>
+                  <i class="fa-solid fa-arrow-left text-xs rtl:inline hidden"></i>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FEATURE CARDS GRID -->
+    <section class="py-12 bg-white border-t border-brand-border/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Collections Card -->
+          <div class="bg-brand-sand/40 p-6 rounded-2xl border border-brand-border/60 hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <h3 class="font-title text-xl font-bold text-brand-dark mb-2" id="cardCollTitle">Collections</h3>
+              <p class="text-brand-muted text-xs leading-relaxed mb-6" id="cardCollDesc">
+                Our mission is to make every bride's dream a reality by curating exquisite bridal collections tailored to your personal aesthetic.
+              </p>
+            </div>
+            <a href="#collections" class="gold-gradient-btn px-4 py-2.5 rounded text-xs font-semibold text-center block" id="cardCollBtn">
+              Explore Collections
+            </a>
+          </div>
+
+          <!-- Consultation Card -->
+          <div class="bg-brand-sand/40 p-6 rounded-2xl border border-brand-border/60 hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <h3 class="font-title text-xl font-bold text-brand-dark mb-2" id="cardConsultTitle">Consultation</h3>
+              <p class="text-brand-muted text-xs leading-relaxed mb-6" id="cardConsultDesc">
+                Book a private, one-on-one session with our senior bridal consultants at our Doha boutique.
+              </p>
+            </div>
+            <a href="https://wa.me/97466053712?text=Hello%20Nour%20Bridal,%20I%20would%20like%20to%20book%20a%20consultation" target="_blank" class="gold-gradient-btn px-4 py-2.5 rounded text-xs font-semibold text-center block" id="cardConsultBtn">
+              Contact Us For Consultation
+            </a>
+          </div>
+
+          <!-- Instagram & Social Card -->
+          <div class="bg-brand-sand/40 p-6 rounded-2xl border border-brand-border/60 hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <h3 class="font-title text-xl font-bold text-brand-dark mb-2" id="cardInstaTitle">Instagram</h3>
+              <p class="text-brand-muted text-xs leading-relaxed mb-6" id="cardInstaDesc">
+                Follow our latest fitting sessions, runway reveals, and real brides on our official social media channels.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <a href="https://wa.me/97466053712?text=Hello%20Nour%20Bridal,%20sending%20a%20consultation%20request" target="_blank" class="gold-gradient-btn px-4 py-2 rounded text-xs font-semibold text-center block">
+                Send Consultation Request
+              </a>
+              <a href="https://instagram.com" target="_blank" class="bg-white hover:bg-stone-50 border border-brand-gold text-brand-dark px-4 py-2 rounded text-xs font-semibold text-center block transition">
+                Follow on Instagram
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COLLECTIONS GALLERY SHOWCASE -->
+    <section id="collections" class="py-20 bg-brand-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-[0.3em] text-brand-gold font-bold block mb-2">Exquisite Craftsmanship</span>
+          <h2 class="font-title text-3xl sm:text-4xl text-brand-dark font-bold mb-4" id="galleryTitle">Bridal Collections</h2>
+          <div class="w-16 h-0.5 bg-brand-gold mx-auto mb-4"></div>
+          <p class="text-brand-muted text-sm" id="gallerySub">Explore our handpicked gowns designed to elevate your wedding day in Doha.</p>
+        </div>
+
+        <!-- Collections Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <!-- Item 1 -->
+          <div class="bg-white rounded-xl overflow-hidden border border-brand-border/80 shadow-sm hover:shadow-lg transition group">
+            <div class="aspect-[3/4] relative overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1546804784-896d0dca3800?auto=format&fit=crop&w=600&q=80" alt="Royal Princess Ballgown" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded text-brand-dark">Couture</span>
+            </div>
+            <div class="p-5 text-center">
+              <h4 class="font-title text-lg font-bold text-brand-dark mb-1">Royal Ballgown</h4>
+              <p class="text-xs text-brand-muted mb-4">Voluminous tulle with handcrafted crystal embellishments.</p>
+              <a href="https://wa.me/97466053712?text=Inquiring%20about%20Royal%20Ballgown" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldHover flex items-center justify-center gap-1">
+                <span>Inquire via WhatsApp</span>
+                <i class="fa-brands fa-whatsapp text-emerald-500 text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="bg-white rounded-xl overflow-hidden border border-brand-border/80 shadow-sm hover:shadow-lg transition group">
+            <div class="aspect-[3/4] relative overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" alt="Sleek Modern Mermaid" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded text-brand-dark">Modern</span>
+            </div>
+            <div class="p-5 text-center">
+              <h4 class="font-title text-lg font-bold text-brand-dark mb-1">Sleek Silhouette</h4>
+              <p class="text-xs text-brand-muted mb-4">Clean satin lines with dramatic chapel train.</p>
+              <a href="https://wa.me/97466053712?text=Inquiring%20about%20Sleek%20Silhouette" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldHover flex items-center justify-center gap-1">
+                <span>Inquire via WhatsApp</span>
+                <i class="fa-brands fa-whatsapp text-emerald-500 text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="bg-white rounded-xl overflow-hidden border border-brand-border/80 shadow-sm hover:shadow-lg transition group">
+            <div class="aspect-[3/4] relative overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&w=600&q=80" alt="Lace A-Line Classic" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded text-brand-dark">Classic</span>
+            </div>
+            <div class="p-5 text-center">
+              <h4 class="font-title text-lg font-bold text-brand-dark mb-1">Ethereal Lace A-Line</h4>
+              <p class="text-xs text-brand-muted mb-4">Romantic floral lace with subtle illusion neckline.</p>
+              <a href="https://wa.me/97466053712?text=Inquiring%20about%20Ethereal%20Lace%20A-Line" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldHover flex items-center justify-center gap-1">
+                <span>Inquire via WhatsApp</span>
+                <i class="fa-brands fa-whatsapp text-emerald-500 text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="bg-white rounded-xl overflow-hidden border border-brand-border/80 shadow-sm hover:shadow-lg transition group">
+            <div class="aspect-[3/4] relative overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=600&q=80" alt="Detachable Over-Skirt" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded text-brand-dark">Transformative</span>
+            </div>
+            <div class="p-5 text-center">
+              <h4 class="font-title text-lg font-bold text-brand-dark mb-1">Detachable Skirt</h4>
+              <p class="text-xs text-brand-muted mb-4">Versatile 2-in-1 design transitioning from ceremony to reception.</p>
+              <a href="https://wa.me/97466053712?text=Inquiring%20about%20Detachable%20Skirt%20Gown" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldHover flex items-center justify-center gap-1">
+                <span>Inquire via WhatsApp</span>
+                <i class="fa-brands fa-whatsapp text-emerald-500 text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer id="contact" class="bg-stone-900 text-stone-300 py-12 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <!-- Col 1: Brand Info -->
+        <div class="md:col-span-2">
+          <h3 class="font-title text-2xl text-white font-bold tracking-widest mb-2">NOUR BRIDAL</h3>
+          <p class="text-xs text-brand-gold tracking-[0.25em] uppercase mb-4">Doha - Qatar</p>
+          <p class="text-stone-400 text-xs max-w-md leading-relaxed mb-6">
+            Our mission is to make every bride's dream a reality by curating exquisite collections and providing personalized, intimate consultations in Doha.
+          </p>
+          <div class="flex items-center space-x-4 rtl:space-x-reverse text-lg">
+            <a href="https://wa.me/97466053712" target="_blank" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-emerald-600 text-white flex items-center justify-center transition">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-pink-600 text-white flex items-center justify-center transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-blue-600 text-white flex items-center justify-center transition">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="font-title text-sm font-bold text-white uppercase tracking-wider mb-4">Navigation</h4>
+          <ul class="space-y-2 text-xs text-stone-400">
+            <li><a href="#home" class="hover:text-brand-gold transition">Home</a></li>
+            <li><a href="#mission" class="hover:text-brand-gold transition">Our Mission</a></li>
+            <li><a href="#collections" class="hover:text-brand-gold transition">Collections</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Direct Contact -->
+        <div>
+          <h4 class="font-title text-sm font-bold text-white uppercase tracking-wider mb-4">Boutique Contact</h4>
+          <ul class="space-y-3 text-xs text-stone-400">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-brand-gold"></i>
+              <span>Doha, Qatar</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-brand-gold"></i>
+              <span>+974 66053712</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-brand-gold"></i>
+              <span>contact@nourbridal.qa</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-stone-800 pt-6 text-center text-[11px] text-stone-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <p>© 2026 Nour Bridal Doha. All Rights Reserved.</p>
+        <p>Your Dress, Designed to Impress.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- CLIENT JAVASCRIPT -->
+  <script>
+    let currentLang = 'en';
+
+    const dictionary = {
+      en: {
+        langLabel: "English / العربية",
+        navHome: "Home",
+        navMission: "Mission",
+        navCollections: "Collections",
+        navContact: "Contact",
+        headerCtaBtn: "Contact Us",
+        heroTagline: "Your Dress, Designed to Impress",
+        heroMissionTitle: "Our Mission",
+        heroMissionText: "Our mission is to make every bride's dream a reality by curating exquisite, unforgettable moments for your special day.",
+        heroBtnWhatsapp: "WhatsApp Chat",
+        heroBtnConsult: "Send Consultation Request",
+        exploreCollBtn: "Explore Collections",
+        cardCollTitle: "Collections",
+        cardCollDesc: "Our mission is to make every bride's dream a reality by curating exquisite bridal collections tailored to your personal aesthetic.",
+        cardCollBtn: "Explore Collections",
+        cardConsultTitle: "Consultation",
+        cardConsultDesc: "Book a private, one-on-one session with our senior bridal consultants at our Doha boutique.",
+        cardConsultBtn: "Contact Us For Consultation",
+        cardInstaTitle: "Instagram",
+        cardInstaDesc: "Follow our latest fitting sessions, runway reveals, and real brides on our official social media channels.",
+        galleryTitle: "Bridal Collections",
+        gallerySub: "Explore our handpicked gowns designed to elevate your wedding day in Doha."
+      },
+      ar: {
+        langLabel: "English / العربية",
+        navHome: "الرئيسية",
+        navMission: "رسالتنا",
+        navCollections: "المجموعات",
+        navContact: "تواصل معنا",
+        headerCtaBtn: "اتصل بنا",
+        heroTagline: "فستانك، ليبهج أنظار الجميع",
+        heroMissionTitle: "رسالتنا",
+        heroMissionText: "رسالتنا هي تحقيق حلم كل عروس من خلال صياغة لحظات رائعة لا تُنسى ليومك الخاص.",
+        heroBtnWhatsapp: "محادثة واتساب",
+        heroBtnConsult: "إرسال طلب استشارة",
+        exploreCollBtn: "استكشف المجموعات",
+        cardCollTitle: "المجموعات",
+        cardCollDesc: "رسالتنا هي تحقيق حلم كل عروس من خلال تقديم مجموعات رائعة مصممة خصيصاً لذوقك.",
+        cardCollBtn: "استكشف المجموعات",
+        cardConsultTitle: "الاستشارات",
+        cardConsultDesc: "احجزي جلسة خاصة مع خبيرات التصميم في بوتيكنا بالدوحة.",
+        cardConsultBtn: "تواصل معنا للاستشارة",
+        cardInstaTitle: "إنستغرام",
+        cardInstaDesc: "تابعي أحدث أزياء الزفاف وكواليس الجلسات عبر حسابنا الرسمي.",
+        galleryTitle: "تشكيلة الفساتين",
+        gallerySub: "اكتشفي أرقى تصاميم فساتين الزفاف المصممة لليلة عمرك في الدوحة."
+      }
+    };
+
+    function switchLanguage() {
+      currentLang = (currentLang === 'en') ? 'ar' : 'en';
+      const dict = dictionary[currentLang];
+
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = (currentLang === 'ar') ? 'rtl' : 'ltr';
+
+      for (const key in dict) {
+        const elem = document.getElementById(key);
+        if (elem) {
+          elem.innerText = dict[key];
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
