@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bridalgown.qa | Luxury Bridal Atelier & Custom Gowns Doha</title>
+    <title>BRIDAL GOWN FASHION | Haute Couture Bridal Gowns Doha Qatar</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,22 +24,22 @@
                         pearl: {
                             DEFAULT: '#FAF8F5',
                             pure: '#FFFDF9',
-                            soft: '#F4EFEA',
-                            border: '#E8E1D7',
+                            soft: '#F5F0EB',
+                            border: '#E6DDD0',
                             darker: '#ECE4DB'
                         },
                         charcoal: {
                             DEFAULT: '#1C1B1A',
-                            velvet: '#232120',
+                            velvet: '#24211F',
                             muted: '#5C5652',
                             light: '#8C857E'
                         },
                         gold: {
-                            DEFAULT: '#C5A059',
-                            champagne: '#D4AF37',
-                            light: '#E8CA7B',
-                            dark: '#9E7E38',
-                            soft: '#FAF0D7'
+                            DEFAULT: '#B89047',
+                            champagne: '#C5A059',
+                            light: '#E2C889',
+                            soft: '#FAF3E3',
+                            dark: '#8C6A2A'
                         }
                     },
                     fontFamily: {
@@ -61,97 +61,394 @@
             overflow-x: hidden;
         }
         .glass-panel {
-            background: rgba(255, 253, 249, 0.92);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(197, 160, 89, 0.25);
+            background: rgba(255, 253, 249, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(197, 160, 89, 0.35);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #B89047 0%, #E2C889 50%, #8C6A2A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dress-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dress-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(184, 144, 71, 0.25);
+        }
+        .gold-separator {
+            height: 1.5px;
+            background: linear-gradient(90deg, transparent, #C5A059, transparent);
         }
     </style>
 </head>
-<body class="bg-[#faf8f5] text-[#2c2825] font-sans antialiased">
+<body class="bg-pearl text-charcoal font-sans antialiased flex flex-col min-h-screen">
 
     <!-- Top Navigation Header -->
-    <header class="sticky top-0 z-40 backdrop-blur-md bg-[#faf8f5]/90 border-b border-[#e8dfd1] transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-pearl/90 border-b border-pearl-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+            
+            <!-- Brand Logo Monogram Header -->
             <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 rounded-full border border-[#d4af37] flex items-center justify-center bg-white shadow-sm">
-                    <span class="font-serif text-lg font-bold text-[#d4af37]">B</span>
+                <div class="w-12 h-12 flex items-center justify-center">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-gold group-hover:scale-105 transition-transform duration-300 fill-current">
+                        <!-- Crown / Flower top -->
+                        <path d="M50 15 C52 20, 58 22, 50 30 C42 22, 48 20, 50 15 Z" />
+                        <path d="M42 22 C37 20, 36 26, 46 30 Z" />
+                        <path d="M58 22 C63 20, 64 26, 54 30 Z" />
+                        <!-- Monogram NB curves -->
+                        <path d="M50 32 C38 32, 28 42, 28 58 C28 72, 38 82, 50 82 C62 82, 72 72, 72 58 C72 42, 62 32, 50 32 Z M50 78 C40 78, 32 70, 32 58 C32 46, 40 36, 50 36 C60 36, 68 46, 68 58 C68 70, 60 78, 50 78 Z" opacity="0.2"/>
+                        <!-- Interlocked N & B stylish stroke representation -->
+                        <path d="M40 40 L40 75 M40 40 L60 75 M60 40 L60 75 M60 40 C68 40, 68 56, 60 56 C68 56, 68 75, 60 75" stroke="#B89047" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    </svg>
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-serif text-xl sm:text-2xl font-semibold tracking-wide text-[#2c2825]">
-                        bridalgown.qa
+                    <span class="font-cinzel text-lg sm:text-xl font-bold tracking-[0.18em] text-charcoal uppercase">
+                        BRIDAL GOWN
                     </span>
-                    <span class="text-[10px] tracking-widest uppercase text-[#736b63] font-medium">Haute Couture Atelier Doha</span>
+                    <span class="text-[9px] tracking-[0.3em] uppercase text-gold-dark font-semibold">FASHION &bull; DOHA QATAR</span>
                 </div>
             </a>
 
-            <div class="flex items-center space-x-3 sm:space-x-5">
-                <a href="https://instagram.com/bridalgownqtr" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full border border-gold/40 flex items-center justify-center text-charcoal hover:text-gold hover:border-gold transition-all" title="Instagram @bridalgownqtr">
-                    <i class="fa-brands fa-instagram text-sm"></i>
+            <!-- Navigation Links -->
+            <div class="flex items-center space-x-4 sm:space-x-8">
+                <a href="#gallery" class="hidden md:inline-block text-xs uppercase tracking-[0.2em] font-semibold text-charcoal hover:text-gold transition-colors">Collection</a>
+                <a href="#terms" class="hidden md:inline-block text-xs uppercase tracking-[0.2em] font-semibold text-charcoal hover:text-gold transition-colors">Terms & Payment</a>
+                
+                <a href="https://instagram.com/bridalgownqtr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center text-charcoal hover:text-gold hover:border-gold transition-all bg-white hover:shadow-md" title="Instagram @bridalgownqtr">
+                    <i class="fa-brands fa-instagram text-base"></i>
                 </a>
 
-                <a href="https://wa.me/97466053712?text=Hello%20bridalgown.qa,%20I%20would%20like%20to%20consult%20about%20a%20bridal%20gown." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-gold via-gold-champagne to-gold-dark text-white text-[11px] uppercase font-bold tracking-widest px-5 py-2.5 rounded-xs hover:brightness-105 transition-all shadow-md">
+                <a href="https://wa.me/97466053712?text=Hello%20BRIDAL%20GOWN%20FASHION,%20I%20would%20like%20to%20consult%20about%20a%20gown." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-gold via-gold-champagne to-gold-dark text-white text-[11px] uppercase font-bold tracking-widest px-5 py-2.5 rounded-full hover:brightness-105 transition-all shadow-md">
                     <i class="fa-brands fa-whatsapp text-white text-sm"></i>
-                    <span>WhatsApp +974 66053712</span>
+                    <span>+974 66053712</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[#2c2825] text-white px-4 py-16">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?q=80&w=2000&auto=format&fit=crop" alt="Bridal Couture Dress" class="w-full h-full object-cover object-center opacity-40">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#2c2825] via-[#2c2825]/40 to-transparent"></div>
-        </div>
+    <!-- Main Body -->
+    <main class="flex-grow">
 
-        <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-            <span class="inline-block px-4 py-1.5 rounded-full border border-[#d4af37]/60 bg-[#2c2825]/60 backdrop-blur-md text-[#d4af37] text-xs uppercase tracking-widest mb-6 font-medium">
-                Doha, Qatar &bull; bridalgown.qa
-            </span>
-
-            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light leading-tight mb-8 text-balance">
-                "We Tailor your taste into a real dress, your Dress is made to impress"
-            </h1>
-
-            <!-- Main Instruction Card -->
-            <div class="glass-panel text-stone-900 border border-gold/40 rounded-xl p-8 mb-8 max-w-2xl text-center shadow-2xl">
-                <p class="text-stone-800 text-base sm:text-lg font-serif leading-relaxed mb-6">
-                    To check our collection visit our Instagram <br>
-                    <a href="https://instagram.com/bridalgownqtr" target="_blank" class="text-amber-700 font-bold underline hover:text-amber-900 text-xl font-sans">@bridalgownqtr</a>
-                </p>
-                <div class="w-16 h-0.5 bg-gold/40 mx-auto mb-6"></div>
-                <p class="text-stone-800 text-base sm:text-lg font-serif leading-relaxed mb-6">
-                    For consultation and order visit our WhatsApp <br>
-                    <a href="https://wa.me/97466053712?text=Hello%20bridalgown.qa,%20I%20would%20like%20to%20consult%20about%20a%20bridal%20gown." target="_blank" class="text-emerald-700 font-bold underline hover:text-emerald-900 text-xl font-sans">+97466053712</a>
-                </p>
-
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 border-t border-stone-200">
-                    <a href="https://instagram.com/bridalgownqtr" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-purple-800 via-pink-700 to-amber-600 text-white text-xs uppercase tracking-widest font-bold rounded-xs shadow-md hover:opacity-95 inline-flex items-center justify-center gap-2">
-                        <i class="fa-brands fa-instagram text-sm"></i>
-                        <span>Open Instagram</span>
-                    </a>
-                    <a href="https://wa.me/97466053712?text=Hello%20bridalgown.qa,%20I%20want%20to%20order%20a%20custom%20gown." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs uppercase tracking-widest font-bold rounded-xs shadow-md inline-flex items-center justify-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-sm"></i>
-                        <span>Open WhatsApp</span>
-                    </a>
-                </div>
+        <!-- Hero Section with Regal Palace Salon Background -->
+        <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-charcoal text-white px-4 py-16">
+            <!-- Luxury Bridal Atelier Background -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000&auto=format&fit=crop" alt="Bridal Haute Couture Salon Doha" class="w-full h-full object-cover object-center opacity-35 scale-105 transform">
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/40"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-charcoal/50 to-charcoal"></div>
             </div>
-        </div>
-    </section>
+
+            <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+                
+                <!-- SVG Brand Emblem Card -->
+                <div class="mb-6 flex flex-col items-center">
+                    <!-- Brand Monogram Graphic -->
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 mb-3">
+                        <svg viewBox="0 0 200 180" class="w-full h-full drop-shadow-lg">
+                            <!-- Lotus Crown -->
+                            <path d="M100 15 C105 25, 118 30, 100 48 C82 30, 95 25, 100 15 Z" fill="#E2C889"/>
+                            <path d="M85 32 C75 28, 72 38, 92 48 Z" fill="#C5A059"/>
+                            <path d="M115 32 C125 28, 128 38, 108 48 Z" fill="#C5A059"/>
+                            <!-- Outer Heart Loops (NB Monogram silhouette) -->
+                            <path d="M100 50 C65 50, 45 75, 45 105 C45 135, 75 150, 100 150 C125 150, 155 135, 155 105 C155 75, 135 50, 100 50 Z" fill="none" stroke="#E2C889" stroke-width="3.5" stroke-linecap="round"/>
+                            <path d="M100 55 C75 55, 58 75, 58 102 C58 128, 80 140, 100 140 C120 140, 142 128, 142 102 C142 75, 125 55, 100 55 Z" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Monogram strokes -->
+                            <path d="M82 68 L82 130 M82 68 L118 130 M118 68 L118 130 M118 68 C132 68, 132 98, 118 98 C132 98, 132 130, 118 130" stroke="#FAF3E3" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <!-- Official Brand Name -->
+                    <h2 class="font-cinzel text-2xl sm:text-4xl tracking-[0.25em] font-extrabold text-pearl-pure uppercase mb-1">
+                        BRIDAL GOWN FASHION
+                    </h2>
+                    
+                    <!-- Decorative Golden Rule -->
+                    <div class="w-48 sm:w-72 h-[2px] bg-gradient-to-r from-transparent via-gold-champagne to-transparent my-3"></div>
+                    
+                    <span class="text-xs sm:text-sm tracking-[0.4em] uppercase font-medium text-gold-light">
+                        DOHA &bull; QATAR
+                    </span>
+                </div>
+
+                <!-- Main Slogan -->
+                <h1 class="font-cormorant text-2xl sm:text-4xl lg:text-5xl font-light italic leading-tight my-6 text-pearl-pure max-w-3xl">
+                    "We Tailor your taste into a real dress, your Dress is made to impress"
+                </h1>
+
+                <!-- Arabic Slogan -->
+                <p class="font-arabic text-lg sm:text-2xl text-gold-light mb-8 opacity-90">
+                    نصمّم ذوقكِ إلى فستانٍ حقيقي.. فستانكِ صُمّم ليبهَر
+                </p>
+
+                <!-- Direct CTA Card -->
+                <div class="glass-panel text-charcoal rounded-2xl p-6 sm:p-8 mb-8 max-w-xl w-full text-center shadow-2xl border border-gold/40">
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-charcoal-muted font-semibold mb-1">To check our collection</p>
+                            <a href="https://instagram.com/bridalgownqtr" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-gold-dark hover:text-gold font-bold text-lg sm:text-xl tracking-wide group transition-colors">
+                                <i class="fa-brands fa-instagram text-xl"></i>
+                                <span>@bridalgownqtr</span>
+                            </a>
+                        </div>
+
+                        <div class="gold-separator"></div>
+
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-charcoal-muted font-semibold mb-1">For consultation and order</p>
+                            <a href="https://wa.me/97466053712?text=Hello%20BRIDAL%20GOWN%20FASHION,%20I%20would%20like%20to%20consult%20about%20a%20bridal%20gown." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-emerald-800 hover:text-emerald-900 font-bold text-lg sm:text-xl tracking-wide group transition-colors">
+                                <i class="fa-brands fa-whatsapp text-xl text-emerald-600"></i>
+                                <span>+974 66053712</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 pt-6 border-t border-pearl-border">
+                        <a href="https://instagram.com/bridalgownqtr" target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-gradient-to-r from-purple-900 via-pink-800 to-amber-700 text-white text-[11px] uppercase tracking-widest font-bold rounded-full shadow-md hover:brightness-110 transition-all inline-flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                            <span>View Instagram</span>
+                        </a>
+                        <a href="https://wa.me/97466053712?text=Hello%20BRIDAL%20GOWN%20FASHION,%20I%20would%20like%20to%20order%20a%20custom%20gown." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-emerald-700 hover:bg-emerald-600 text-white text-[11px] uppercase tracking-widest font-bold rounded-full shadow-md transition-all inline-flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Scroll Down Indicator -->
+                <a href="#gallery" class="text-[11px] uppercase tracking-[0.3em] text-gold-light hover:text-white transition-colors flex items-center gap-2">
+                    <span>Explore Haute Couture Collection</span>
+                    <i class="fa-solid fa-chevron-down animate-bounce text-xs"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- FEATURED BRIDAL COLLECTION GALLERY -->
+        <section id="gallery" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-dark text-xs uppercase tracking-[0.35em] font-bold block mb-2">Bespoke Excellence</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl text-charcoal font-semibold">Featured Couture Masterpieces</h2>
+                <div class="w-24 h-0.5 bg-gold mx-auto my-4"></div>
+                <p class="text-charcoal-muted text-xs sm:text-sm leading-relaxed font-light">
+                    Every gown is custom tailored to perfection in Doha using luxury silk, hand-beaded lace, and structural corsetry.
+                </p>
+            </div>
+
+            <!-- Gowns Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Gown 1 -->
+                <div class="dress-card bg-white rounded-xl overflow-hidden border border-pearl-border shadow-md flex flex-col group">
+                    <div class="relative overflow-hidden h-[460px]">
+                        <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?q=80&w=1000&auto=format&fit=crop" alt="Royal Lace Cathedral Gown" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <span class="absolute top-4 left-4 bg-charcoal/80 backdrop-blur-md text-gold-light text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full border border-gold/30">
+                            Royal Ballgown
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow bg-white">
+                        <div>
+                            <h3 class="font-cinzel text-lg text-charcoal font-bold mb-2">Royal Lace Cathedral Gown</h3>
+                            <p class="text-xs text-charcoal-muted leading-relaxed mb-6 font-light">
+                                Hand-embroidered French lace bodice with high illusion neck and a majestic cathedral-length train.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/97466053712?text=Hello%20BRIDAL%20GOWN%20FASHION,%20I%20am%20interested%20in%20inquiring%20about%20the%20Royal%20Lace%20Cathedral%20Gown." target="_blank" class="w-full py-3 bg-pearl-soft hover:bg-gold hover:text-white text-gold-dark font-bold text-xs uppercase tracking-widest rounded-full transition-all text-center border border-gold/30 inline-flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Inquire via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gown 2 -->
+                <div class="dress-card bg-white rounded-xl overflow-hidden border border-pearl-border shadow-md flex flex-col group">
+                    <div class="relative overflow-hidden h-[460px]">
+                        <img src="https://images.unsplash.com/photo-1546804784-896d0dca3814?q=80&w=1000&auto=format&fit=crop" alt="Bespoke Silk Satin Off-Shoulder Gown" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <span class="absolute top-4 left-4 bg-charcoal/80 backdrop-blur-md text-gold-light text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full border border-gold/30">
+                            Duchess Satin
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow bg-white">
+                        <div>
+                            <h3 class="font-cinzel text-lg text-charcoal font-bold mb-2">Bespoke Silk Corset Gown</h3>
+                            <p class="text-xs text-charcoal-muted leading-relaxed mb-6 font-light">
+                                Sculpted off-shoulder bodice in heavy Italian satin paired with an opulent flared volume skirt.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/97466053712?text=Hello%20BRIDAL%20GOWN%20FASHION,%20I%20am%20interested%20in%20inquiring%20about%20the%20Bespoke%20Silk%20Corset%20Gown." target="_blank" class="w-full py-3 bg-pearl-soft hover:bg-gold hover:text-white text-gold-dark font-bold text-xs uppercase tracking-widest rounded-full transition-all text-center border border-gold/30 inline-flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Inquire via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gown 3 -->
+                <div class="dress-card bg-white rounded-xl overflow-hidden border border-pearl-border shadow-md flex flex-col group">
+                    <div class="relative overflow-hidden h-[460px]">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop" alt="Hand-Beaded Mermaid Silhouette" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <span class="absolute top-4 left-4 bg-charcoal/80 backdrop-blur-md text-gold-light text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full border border-gold/30">
+                            Mermaid Cut
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow bg-white">
+                        <div>
+                            <h3 class="font-cinzel text-lg text-charcoal font-bold mb-2">Hand-Beaded Mermaid Silhouette</h3>
+                            <p class="text-xs text-charcoal-muted leading-relaxed mb-6 font-light">
+                                Form-fitting hour-glass gown embellished with Swarovski crystals and intricate pearl lace appliques.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/97466053712?text=Hello%20BRIDAL%20GOWN%20FASHION,%20I%20am%20interested%20in%20inquiring%20about%20the%20Hand-Beaded%20Mermaid%20Silhouette." target="_blank" class="w-full py-3 bg-pearl-soft hover:bg-gold hover:text-white text-gold-dark font-bold text-xs uppercase tracking-widest rounded-full transition-all text-center border border-gold/30 inline-flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Inquire via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TERMS OF PURCHASE AND PAYMENT SECTION -->
+        <section id="terms" class="py-24 bg-pearl-soft border-t border-pearl-border relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-gold-dark text-xs uppercase tracking-[0.35em] font-bold block mb-2">Order Process</span>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl text-charcoal font-semibold">Terms of Purchase & Payment</h2>
+                    <div class="w-20 h-0.5 bg-gold mx-auto my-4"></div>
+                    <p class="text-charcoal-muted text-xs sm:text-sm leading-relaxed font-light">
+                        Follow our straightforward 4-step ordering process to bring your dream bridal dress into reality.
+                    </p>
+                </div>
+
+                <!-- 4 Steps Card Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    
+                    <!-- Step 1 -->
+                    <div class="bg-white p-6 rounded-xl border border-pearl-border shadow-sm flex flex-col justify-between hover:border-gold transition-colors relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-gold-soft rounded-bl-full flex items-top justify-end p-3 text-gold-dark font-cinzel font-bold text-xl">1</div>
+                        <div>
+                            <div class="w-10 h-10 rounded-full bg-pearl-soft border border-gold/30 text-gold-dark flex items-center justify-center text-lg mb-4">
+                                <i class="fa-solid fa-dress text-sm"></i>
+                            </div>
+                            <h3 class="font-cinzel text-base text-charcoal font-bold mb-2">1. Choose the Dress</h3>
+                            <p class="text-xs text-charcoal-muted leading-relaxed font-light">
+                                Choose your dress from our Instagram page <a href="https://instagram.com/bridalgownqtr" target="_blank" class="text-gold-dark font-semibold underline">@bridalgownqtr</a> or send us a picture of your custom dress design.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-white p-6 rounded-xl border border-pearl-border shadow-sm flex flex-col justify-between hover:border-gold transition-colors relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-gold-soft rounded-bl-full flex items-top justify-end p-3 text-gold-dark font-cinzel font-bold text-xl">2</div>
+                        <div>
+                            <div class="w-10 h-10 rounded-full bg-pearl-soft border border-gold/30 text-gold-dark flex items-center justify-center text-lg mb-4">
+                                <i class="fa-solid fa-ruler-vertical text-sm"></i>
+                            </div>
+                            <h3 class="font-cinzel text-base text-charcoal font-bold mb-2">2. Get Your Size</h3>
+                            <p class="text-xs text-charcoal-muted leading-relaxed font-light">
+                                Get your exact body measurements done professionally by a local tailor to ensure an impeccable fit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-white p-6 rounded-xl border border-pearl-border shadow-sm flex flex-col justify-between hover:border-gold transition-colors relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-gold-soft rounded-bl-full flex items-top justify-end p-3 text-gold-dark font-cinzel font-bold text-xl">3</div>
+                        <div>
+                            <div class="w-10 h-10 rounded-full bg-pearl-soft border border-gold/30 text-gold-dark flex items-center justify-center text-lg mb-4">
+                                <i class="fa-solid fa-receipt text-sm"></i>
+                            </div>
+                            <h3 class="font-cinzel text-base text-charcoal font-bold mb-2">3. Down Payment</h3>
+                            <p class="text-xs text-charcoal-muted leading-relaxed font-light">
+                                Pay the down payment through <span class="font-semibold text-charcoal">Fawran</span> or <span class="font-semibold text-charcoal">Cash</span>. An official receipt will be issued upon payment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-white p-6 rounded-xl border border-pearl-border shadow-sm flex flex-col justify-between hover:border-gold transition-colors relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-gold-soft rounded-bl-full flex items-top justify-end p-3 text-gold-dark font-cinzel font-bold text-xl">4</div>
+                        <div>
+                            <div class="w-10 h-10 rounded-full bg-pearl-soft border border-gold/30 text-gold-dark flex items-center justify-center text-lg mb-4">
+                                <i class="fa-solid fa-file-signature text-sm"></i>
+                            </div>
+                            <h3 class="font-cinzel text-base text-charcoal font-bold mb-2">4. Sign & Share Form</h3>
+                            <p class="text-xs text-charcoal-muted leading-relaxed font-light">
+                                Sign the order specifications form and send it back to us to initiate dress tailoring immediately.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Mandatory Refund Policy Highlight Box -->
+                <div class="bg-white border-l-4 border-l-gold border border-pearl-border p-6 rounded-r-xl max-w-4xl mx-auto shadow-md">
+                    <div class="flex items-start gap-4">
+                        <div class="text-gold-dark text-2xl pt-1">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-cinzel text-base text-charcoal font-bold mb-1">Important Refund & Deposit Policy</h4>
+                            <p class="text-xs sm:text-sm text-charcoal-muted leading-relaxed font-light">
+                                Please note that down payments are <span class="font-semibold text-charcoal underline">not refunded</span> under any circumstances once tailoring has commenced, unless there is a confirmed mistake in measurements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-[#2c2825] text-[#e8dfd1] py-10 border-t border-[#3d3834]">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm text-[#a89f91] mb-2">Doha, Qatar | WhatsApp: +974 66053712 | Instagram: @bridalgownqtr</p>
-            <p class="text-xs text-[#a89f91]">&copy; 2026 bridalgown.qa. All rights reserved.</p>
+    <footer class="bg-charcoal text-pearl-soft py-14 border-t border-charcoal-velvet">
+        <div class="max-w-7xl mx-auto px-4 text-center flex flex-col items-center">
+            
+            <!-- Footer Logo -->
+            <div class="w-12 h-12 mb-3">
+                <svg viewBox="0 0 100 100" class="w-full h-full text-gold fill-current">
+                    <path d="M50 15 C52 20, 58 22, 50 30 C42 22, 48 20, 50 15 Z" />
+                    <path d="M40 40 L40 75 M40 40 L60 75 M60 40 L60 75 M60 40 C68 40, 68 56, 60 56 C68 56, 68 75, 60 75" stroke="#B89047" stroke-width="3" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div class="font-cinzel text-xl font-bold tracking-[0.2em] text-gold mb-1">BRIDAL GOWN FASHION</div>
+            <p class="text-xs tracking-[0.3em] uppercase text-charcoal-light mb-6">Doha &bull; Qatar</p>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 mb-8 text-xs">
+                <a href="https://instagram.com/bridalgownqtr" target="_blank" rel="noopener noreferrer" class="text-pearl-soft hover:text-gold transition-colors flex items-center gap-2">
+                    <i class="fa-brands fa-instagram text-gold text-base"></i>
+                    <span>@bridalgownqtr</span>
+                </a>
+                <span class="text-charcoal-light">&bull;</span>
+                <a href="https://wa.me/97466053712" target="_blank" rel="noopener noreferrer" class="text-pearl-soft hover:text-gold transition-colors flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+                    <span>+974 66053712</span>
+                </a>
+            </div>
+
+            <p class="text-[11px] text-charcoal-light">&copy; 2026 BRIDAL GOWN FASHION. All rights reserved. Custom Bridal Atelier Doha Qatar.</p>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/97466053712?text=Hello%20bridalgown.qa!%20I%20would%20like%20to%20consult%20about%20a%20bridal%20gown." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 transform hover:scale-110" aria-label="WhatsApp">
+    <!-- Persistent Floating WhatsApp Button -->
+    <a href="https://wa.me/97466053712?text=Hello%20BRIDAL%20GOWN%20FASHION,%20I%20would%20like%20to%20consult%20about%20a%20gown." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 border-2 border-white" aria-label="Contact on WhatsApp">
         <i class="fa-brands fa-whatsapp text-2xl"></i>
     </a>
 
 </body>
 </html>
+```
+
+### Summary of Changes:
+1. **Logo Integration**: Added the exact vector emblem and typography matching **BRIDAL GOWN FASHION — DOHA - QATAR** at the top header, hero section, and footer.
+2. **Removed Pearl Qatar**: Replaced background images with a luxurious bridal atelier interior background.
+3. **Terms of Purchase & Payment**: Structured into 4 distinct cards with icon badges, clearly detailing:
+   * 1. Choose from `@bridalgownqtr` or custom photo.
+   * 2. Professional tailor sizing.
+   * 3. Fawran or Cash down payment + receipt.
+   * 4. Sign & share the order form.
+   * **Policy note**: Explicit statement that down payments are non-refundable unless there is a measurement mistake.
+4. **Direct Links**: Clickable links to `@bridalgownqtr` on Instagram and `+974 66053712` on WhatsApp.
